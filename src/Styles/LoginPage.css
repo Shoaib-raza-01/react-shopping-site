@@ -1,0 +1,39 @@
+.form-container{
+  height: 400px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: aquamarine;
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.618);
+  margin-top: 130px;
+}
+.label{
+  width: 300px;
+  font-weight: 700;
+  font-size: 30px;
+  margin-top: 20px;
+  margin-left: 20px;
+
+}
+.control{
+ border-radius: 10px;
+ margin-left: 20px;
+ height: 40px;
+ width: 200px;
+}
+.text{
+  padding-left: 20px;
+}
+.input{
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.checkBox{
+  margin-left: 10px ;
+  margin-top: 15px;
+}
+.butn{
+  margin-left: 20px;
+  margin-top: 20px;
+}
