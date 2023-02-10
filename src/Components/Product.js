@@ -20,7 +20,6 @@ function Product() {
 
   if (loading) return <div className="loading">
     <img src={logo} className="imageTag" />
-    {/* <p className="load">Loading.........</p> */}
   </div>
 
   return (
