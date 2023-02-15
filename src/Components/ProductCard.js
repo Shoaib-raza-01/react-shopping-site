@@ -1,10 +1,15 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import '../Styles/ProductCard.css'
 import { useCart } from 'react-use-cart'
 
 function ProductPage(props) {
   const addItem = useCart();
+
+  const navigate = useNavigate();
+   const handleBuyClick = () => {
+      navigate('/buy', {state : {products : props.prodObj}})
+   }
 
   const style = {
     border: "2px solid black",
@@ -30,7 +35,7 @@ function ProductPage(props) {
       <p> $ {props.prodObj.price}</p>
       <div className="btns">
         <button className="addToCart" onClick={() => addItem(props.prodObj)}>Add To Cart</button>
-        <button className="buyBtn">Buy Now</button>
+        <button className="buyBtn" onClick={handleBuyClick} >Buy Now</button>
       </div>
       
 

@@ -5,6 +5,7 @@ import Cart from "./Components/Cart";
 import Product from "./Components/Product";
 import { CartProvider } from "react-use-cart";
 import BuyPage from "./Components/BuyPage";
+import NotFoundPage from "./Components/NotFoundPage";
 function App() {
   return (
     <CartProvider>
@@ -15,6 +16,7 @@ function App() {
         <Route path="/cart" element = {<Cart />} />
         <Route path='/products/:id' element = {<Product />} />
         <Route path='/buy' element= {<BuyPage />} />
+        <Route path='*' element= {<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
     </CartProvider>
