@@ -11,9 +11,10 @@ function HomePage() {
   const [products, setProducts] = useState([])
 
   const cartItem = useCart();
+  
   const categoryOfProd = (QUERY) =>{
     axios.get(
-      QUERY === undefined ? "https://fakestoreapi.com/products" : `https://fakestoreapi.com/products/category/${QUERY}`
+      QUERY === "" ? "https://fakestoreapi.com/products" : `https://fakestoreapi.com/products/category/${QUERY}`
     ).then((response) => {
       console.log(response)
       setProducts(response.data)

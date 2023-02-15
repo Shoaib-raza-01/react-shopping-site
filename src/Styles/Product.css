@@ -25,10 +25,10 @@
 }
 .addToCart{
   height: 40px;
-  width: 140px;
+  width: 120px;
   color: antiquewhite;
   border-radius: 8px;
-  background-color : rgb(67, 45, 45);
+  background-color : rgb(224, 147, 147);
 }
 .data{
   margin-left: 30px;
