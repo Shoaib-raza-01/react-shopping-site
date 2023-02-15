@@ -4,11 +4,18 @@ import axios from 'axios'
 import logo from '../Images/logo.png'
 import { useParams } from 'react-router-dom'
 import Navbar from './Navbar'
+import { useNavigate } from 'react-router-dom'
 
 function Product() {
   const [productData, setProductData] = useState()
   const [loading, setLoading] = useState(false)
   const param = useParams()
+
+  const navigate = useNavigate();
+
+  const handleBuyClick = () => {
+    navigate('/buy',{ state : {products : productData}});
+  }
 
   useEffect(() => {
     setLoading(true)
@@ -36,6 +43,7 @@ function Product() {
             <p className='prodDesc'>{productData.description}</p>
             <p className='prodPrice'>${productData.price}</p>
             <button className="addToCart">Add To Cart</button>
+            <button className="buybtn" onClick={handleBuyClick} >Buy Now</button>
           </div>
         </div>
         </>
